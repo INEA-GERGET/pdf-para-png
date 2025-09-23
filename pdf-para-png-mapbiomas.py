@@ -5,7 +5,7 @@ from pdf2image import convert_from_path
 from PIL import Image
 
 def converter_pdfs_da_pasta(pasta_entrada, pasta_saida, formato='PNG'):
-       """
+    """
     Converte a primeira página de todos os arquivos PDF de uma pasta para um formato de imagem,
     corta a imagem gerada e a salva em uma pasta de saída.
 
@@ -85,6 +85,7 @@ def converter_pdfs_da_pasta(pasta_entrada, pasta_saida, formato='PNG'):
                 print(f"ERRO ao processar o arquivo {nome_arquivo}: {e}")
 
 if __name__ == "__main__":
+       
     # CAMINHO DOS AQUIVOS
     pasta_dos_pdfs = r"C:\Users\Nome de Usuário\Desktop\pdf-para-png\Antes_Depois"    # TROCAR
     pasta_das_imagens_geradas = r"C:\Users\Nome de Usuário\Desktop\pdf-para-png\Imagens"    # TROCAR
@@ -92,4 +93,5 @@ if __name__ == "__main__":
     converter_pdfs_da_pasta(pasta_dos_pdfs, pasta_das_imagens_geradas, formato='PNG')
 
     print("\nConversão concluída!")
+
 
