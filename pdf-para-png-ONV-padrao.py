@@ -3,6 +3,34 @@ from pdf2image import convert_from_path
 from PIL import Image
 
 def converter_pdfs_da_pasta(pasta_entrada, pasta_saida, formato='PNG'):
+   """
+    Converte a primeira página de todos os arquivos PDF de uma pasta para um formato de imagem,
+    corta a imagem gerada e a salva em uma pasta de saída.
+
+    A função itera sobre todos os arquivos PDF na `pasta_entrada`, converte a
+    primeira página de cada PDF em uma imagem (PNG por padrão), e então corta
+    a imagem para reter apenas uma seção específica. A imagem cortada
+    é salva na `pasta_saida`. O caminho para o executável Poppler deve
+    ser especificado dentro da função.
+
+    Args:
+        pasta_entrada (str): O caminho para o diretório contendo os arquivos PDF a serem processados.
+        pasta_saida (str): O caminho para o diretório onde as imagens convertidas e cortadas serão salvas.
+                           Se o diretório não existir, ele será criado.
+        formato (str, opcional): O formato de saída para as imagens. 'PNG' por padrão.
+                                 Outros formatos como 'JPEG' podem ser usados.
+
+    Returns:
+        None: A função não retorna nenhum valor. Ela realiza a operação de conversão
+              e salvamento diretamente nos diretórios especificados.
+
+    Raises:
+        Exception: Captura e imprime mensagens de erro caso ocorram problemas
+                   durante a conversão do PDF (ex: arquivo corrompido) ou o corte da imagem.
+                   Note que o caminho do Poppler (`caminho_poppler`) deve ser ajustado
+                   manualmente no código para o seu sistema.
+    """
+    
     if not os.path.exists(pasta_saida):
         os.makedirs(pasta_saida)
 
@@ -15,8 +43,8 @@ def converter_pdfs_da_pasta(pasta_entrada, pasta_saida, formato='PNG'):
             print(f"\nProcessando arquivo: {nome_arquivo}...")
 
             try:
-                # 1. Cole o seu caminho exato do poppler aqui.
-                caminho_poppler = r"C:\Users\barbarabic\Downloads\poppler-24.08.0\Library\bin"
+                # CAMINHO DA \Library\bin DO POPPLER 
+                caminho_poppler = r"C:\Users\Nome de Usuário\Downloads\poppler-24.08.0\Library\bin"    # TROCAR
                 
                 # Modificação: Adiciona first_page=1 e last_page=1 para converter apenas a primeira página.
                 imagens = convert_from_path(caminho_completo_pdf, poppler_path=caminho_poppler, dpi=200, first_page=1, last_page=1)
@@ -56,9 +84,11 @@ def converter_pdfs_da_pasta(pasta_entrada, pasta_saida, formato='PNG'):
                 print(f"ERRO ao processar o arquivo {nome_arquivo}: {e}")
 
 if __name__ == "__main__":
-    # Configure suas pastas aqui
-    pasta_dos_pdfs = r"C:\Users\barbarabic\Desktop\Script fotos do pdf\Antes_Depois_Embargo_OPMAEP"
-    pasta_das_imagens_geradas = r"C:\Users\barbarabic\Desktop\Script fotos do pdf\Antes_Depois_Embargo_OPMAEP\Imagens"
+    
+    # CAMINHO DOS AQUIVOS
+    pasta_dos_pdfs = r"C:\Users\Nome de Usuário\Desktop\pdf-para-png\Antes_Depois"    # TROCAR
+    pasta_das_imagens_geradas = r"C:\Users\Nome de Usuário\Desktop\pdf-para-png\Imagens"    # TROCAR
 
     converter_pdfs_da_pasta(pasta_dos_pdfs, pasta_das_imagens_geradas, formato='PNG')
+
     print("\nConversão concluída!")
