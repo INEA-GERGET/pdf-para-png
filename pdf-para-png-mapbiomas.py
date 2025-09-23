@@ -45,7 +45,7 @@ def converter_pdfs_da_pasta(pasta_entrada, pasta_saida, formato='PNG'):
 
             try:
                 # CAMINHO DA \Library\bin DO POPPLER 
-                caminho_poppler = r"C:\Users\barbarabic\Downloads\poppler-24.08.0\Library\bin"    # TROCAR
+                caminho_poppler = r"C:\Users\Nome de Usuário\Downloads\poppler-24.08.0\Library\bin"    # TROCAR
                 
                 # Modificação: Adiciona first_page=1 e last_page=1 para converter apenas a primeira página.
                 imagens = convert_from_path(caminho_completo_pdf, poppler_path=caminho_poppler, dpi=200, first_page=1, last_page=1)
@@ -87,8 +87,9 @@ def converter_pdfs_da_pasta(pasta_entrada, pasta_saida, formato='PNG'):
 if __name__ == "__main__":
     # CAMINHO DOS AQUIVOS
     pasta_dos_pdfs = r"C:\Users\Nome de Usuário\Desktop\pdf-para-png\Antes_Depois"    # TROCAR
-    pasta_das_imagens_geradas = r"C:\Users\Nome de Usuário\Desktop\pdf-para-png\Antes_Depois\Imagens"    # TROCAR
+    pasta_das_imagens_geradas = r"C:\Users\Nome de Usuário\Desktop\pdf-para-png\Imagens"    # TROCAR
 
     converter_pdfs_da_pasta(pasta_dos_pdfs, pasta_das_imagens_geradas, formato='PNG')
 
     print("\nConversão concluída!")
+
