@@ -42,7 +42,7 @@ Para utilizar os scripts é necessária a instalação das bibliotecas Python:
 
 Além das bibliotecas Python, esta função tem uma dependência externa crucial:
 
-Poppler: É um utilitário de software para renderização de PDFs. A biblioteca pdf2image precisa do [Poppler 24.08.0](https://github.com/oschwartz10612/poppler-windows/releases/tag/v24.08.0-0) para funcionar. Sem o Poppler, a função não conseguirá converter os PDFs.
+**Poppler**: É um utilitário de software para renderização de PDFs. A biblioteca pdf2image precisa do [Poppler 24.08.0](https://github.com/oschwartz10612/poppler-windows/releases/tag/v24.08.0-0) para funcionar. Sem o Poppler, a função não conseguirá converter os PDFs.
 Você deve baixar os binários do Poppler e fornecer o caminho `...\Libary\bin` na variável caminho_poppler dentro da sua função:
 ```python
     # MODIFIQUE O CAMINHO DO SEU POPPLER
