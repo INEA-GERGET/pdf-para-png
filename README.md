@@ -13,6 +13,14 @@ Para utilizar os scripts deste repositório é necessário colocar os PFDs nas p
     pasta_raiz = r"C:\Users\Nome-do-usuário\Desktop\pdf_para_png"
 ```
 
+### Sobre os arquivos
+
+* [**AD_BrasilMAIS**](/AD_BrasilMAIS): Nesta pasta ficarão os PDFs com origem do Brasil MAIS. O arquivo que está nela é apenas para teste e deve ser apagado após o teste do script.
+* [**AD_MapBiomas_ONVpadrao**](/AD_MapBiomas_ONVpadrao): Nesta pasta ficarão os PDFs com origem do Map Biomas e os gerados a partir do modelo padrão do ONV ([`layout-ONVpadrao.pagx`](layout-ONVpadrao.pagx)). Os arquivos que estão nesta pasta são apenas para teste e devem ser apagados após o teste do script.
+* [**AD_ONVantigo**](/AD_ONVantigo): Nesta pasta ficarão os PDFs com origem do ONV, mas que não foram gerados com o modelo padrão do ONV ([`layout-ONVpadrao.pagx`](layout-ONVpadrao.pagx)). O arquivo que está nela é apenas para teste e deve ser apagado após o teste do script.
+* [**layout-ONVpadrao.pagx**](layout-ONVpadrao.pagx): É o modelo para gerar os PDFs ONVpadrão dentro do [ArcGISpro](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm).
+* [**pdf-para-png.py**](pdf-para-png.py): É o script em Python para cortar e salvar as imagens dos PDFs.
+
 ## Instalação
 
 Para utilizar os scripts é necessária a instalação das bibliotecas Python:
