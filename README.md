@@ -1,5 +1,13 @@
 # Gerar imagens de Antes e Depois a partir de PDFs
 
+## Sumário
+1. [Descrição](#Descrição)
+2. [Uso](#Uso)
+   - [Sobre os arquivos](#Sobre-os-arquivos)
+4. [Instalação](#Instalação)
+5. [Requisitos adicionais](#Requisitos-adicionais)
+6. [Exemplos](#Exemplos)
+
 ## Descrição
 
 Repositório com para gerar as imagens de Antes e Depois dos [laudos](https://github.com/INEA-GERGET/ONV-laudo-do-alerta) e [embargos](https://github.com/INEA-GERGET/ONV-laudo-de-embargo-cautelar) a partir de PDFs de fontes diferentes: OVNpadrão, ONVantigo (não padronizado, antes de Outubro de 2025), MapBiomas e BrasilMAIS.
@@ -30,7 +38,7 @@ Para utilizar os scripts é necessária a instalação das bibliotecas Python:
 * **pdf2image**: Esta biblioteca é essencial para a conversão de PDF para imagem.
 * **Pillow**: Usada para processar as imagens após a conversão.
 
-## Requisitos Adicionais
+## Requisitos adicionais
 
 Além das bibliotecas Python, esta função tem uma dependência externa crucial:
 
