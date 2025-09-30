@@ -9,11 +9,8 @@ Para utilizar os scripts deste repositório é necessário colocar os PFDs nas p
 
 É necessário trocar os caminhos para os arquivos de entrada e saída:
 ```python
-# MODIFIQUE OS CAMINHOS ABAIXO PARA AS SUAS PASTAS
-    pasta_MapBiomas_ONVpadrao = r"C:\Users\Nome-do-Usuário\Desktop\pdf_para_png\AD_MapBiomas_ONVpadrao"
-    pasta_ONVantigo = r"C:\Users\Nome-do-Usuário\Desktop\pdf_para_png\AD_ONVantigo"
-    pasta_BrasilMAIS = r"C:\Users\Nome-do-Usuário\Desktop\pdf_para_png\AD_BrasilMAIS"
-    pasta_das_imagens_geradas = r"C:\Users\Nome-do-Usuário\Desktop\pdf_para_png\antes_depois"
+    # MODIFIQUE O CAMINHO DA PASTA RAIZ
+    pasta_raiz = r"C:\Users\Nome-do-usuário\Desktop\pdf_para_png"
 ```
 
 ## Instalação
@@ -32,8 +29,8 @@ Além das bibliotecas Python, esta função tem uma dependência externa crucial
 Poppler: É um utilitário de software para renderização de PDFs. A biblioteca pdf2image precisa do [Poppler 24.08.0](https://github.com/oschwartz10612/poppler-windows/releases/tag/v24.08.0-0) para funcionar. Sem o Poppler, a função não conseguirá converter os PDFs.
 Você deve baixar os binários do Poppler e fornecer o caminho `...\Libary\bin` na variável caminho_poppler dentro da sua função:
 ```python
-# MODIFIQUE O CAMINHO DO SEU PROPPLER
-caminho_poppler = r"C:\Users\barbarabic\Downloads\poppler-24.08.0\Library\bin"
+    # MODIFIQUE O CAMINHO DO SEU POPPLER
+    caminho_poppler = r"C:\Users\Nome-do-usuário\Downloads\poppler-24.08.0\Library\bin"
 ```
 
 ## Exemplos 
